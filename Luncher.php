@@ -1,5 +1,5 @@
 <?php
-define('BOT_TOKEN', '**TOKEN**');
+define('BOT_TOKEN', '247068143:AAGSJMAThbK_Tf1tCmVphfw19XLLQU9ThrI');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 function apiRequestWebhook($method, $parameters) {
@@ -115,7 +115,7 @@ function processMessage($message) {
   // process incoming message
   $boolean = file_get_contents('booleans.txt');
   $booleans= explode("\n",$boolean);
-  $admin = **ADMIN**;
+  $admin = 202121961;
   $message_id = $message['message_id'];
   $rpto = $message['reply_to_message']['forward_from']['id'];
   $chat_id = $message['chat']['id'];
@@ -562,7 +562,8 @@ $pmembersid= explode("\n",$txxt);
 }
 if($chat_id==$admin){
   apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => ' سلام قربان حوش آمدید😉
-برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 😎
+برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 
+ این ربات توسظ @my_mohammad  نوشته شده است
 برای آشنایی دکمه ی ⚓️ Help️ را بزنید 👌😃
 .',"parse_mode"=>"MARKDOWN", 'reply_markup' => array(
         'keyboard' => array(array('🗣 Send To All'),array('⚓️ Help','👥 Members','❌ Blocked Users'),array("Settings ⚙")),
@@ -692,6 +693,8 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
 —-------------------------------
 🔸`4.`*Settings*
 تنظیمان ربات
+ 
+ این ربات توسط @my_mohammad نوشته شده است
 
 .","parse_mode" =>"MARKDOWN",'reply_markup' => array(
         'keyboard' => array(array('🗣 Send To All'),array('⚓️ Help','👥 Members','❌ Blocked Users'),array("Settings ⚙")),
